@@ -24,12 +24,12 @@ let generatedHTML='';
    generatedHTML +=
    `
    <div class="item">
-                     <img src="${result.recipe.image}" alt="">
-                     <div class="flex-container">
-                         <h1 class="title">${result.recipe.label}</h1>
+                     <img src="${result.recipe.image}" class="text-center" alt="">
+                     <div class="flex-container text-center">
+                         <h1 class="title text-center">${result.recipe.label}</h1>
                          <a class="view-button" href="${result.recipe.url}">View Recipe</a>
                      </div>
-                     <p class="item-data">calories:${result.recipe.calories.toFixed(2)}</p>
+                    
                  </div>
 
 
@@ -38,11 +38,3 @@ let generatedHTML='';
     })
     SearchResultDiv.innerHTML = generatedHTML;
 }
-/*<div class="card" style="width: 18rem;">
-  <img src="${result.recipe.image}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">${result.recipe.label}</h5>
-    <p class="card-text">calories:${result.recipe.calories.toFixed(2)}</p>
-    <a href="#" class="btn btn-primary">${result.recipe.url}</a>
-  </div>
-</div>*/

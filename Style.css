@@ -32,7 +32,7 @@ section {
 .brand {
   text-align: center;
   font-size: 4rem;
-  color: whitesmoke;
+  color: #f08080;
   margin-bottom: 38px;
 }
 form {
@@ -74,26 +74,26 @@ form ion-icon {
   height: 300px;
   border-radius: 4px;
 }
-.item .flex-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+
 .item .title {
-  color: whitesmoke;
+  color: #f08080;
   margin: 20px 10px 0 0;
   font-size: 1.8rem;
   font-weight: 400;
 }
+a {
+  text-align: center;
+}
 .view-button {
   text-decoration: none;
-  text-align: center;
   width: 130px;
   padding: 10px 0;
-  background-color: #404041;
   color: white;
   font-size: 1.4rem;
-  margin-top: 20px;
+}
+.view-button:hover {
+  text-decoration: none;
+  color: white;
 }
 .item-data {
   color: whitesmoke;
