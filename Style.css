@@ -107,3 +107,10 @@ form ion-icon {
   letter-spacing: 0.05rem;
   line-height: 2rem;
 }
+.container .initial .brand {
+  font-size: 7rem;
+}
+.container .initial form {
+  padding: 20px;
+  font-size: 3rem;
+}
