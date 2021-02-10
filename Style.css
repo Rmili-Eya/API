@@ -70,13 +70,14 @@ form ion-icon {
   background-color: rgb(37, 37, 37);
   padding: 15px;
   overflow: hidden;
+  margin: 15px;
 }
 .item img {
   width: 100%;
   height: 300px;
   border-radius: 4px;
 }
-.item .flex-ontainer {
+.item .flex-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -111,6 +112,9 @@ form ion-icon {
   font-size: 7rem;
 }
 .container .initial form {
+  max-width: 800px;
+}
+.container .initial form input {
   padding: 20px;
   font-size: 3rem;
 }
