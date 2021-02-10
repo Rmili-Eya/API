@@ -5,8 +5,8 @@
   box-sizing: border-box;
 }
 img {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   object-fit: cover;
 }
 html {
@@ -38,7 +38,7 @@ section {
 form {
   width: 90%;
   max-width: 400px;
-  margin: 28px auto;
+  margin: 20px auto;
   background-color: rgb(223, 223, 223);
   border-radius: 4px;
 }
@@ -58,22 +58,19 @@ form ion-icon {
   color: rgb(75, 75, 75);
 }
 .search-result {
-  margin-top: 50px;
   width: 100%;
-  display: grid;
-  grid-gap: 25px;
-  grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 50px;
 }
 .item {
-  width: 100%;
   border-radius: 8px;
   background-color: rgb(37, 37, 37);
   padding: 15px;
   overflow: hidden;
   margin: 15px;
+  width: 350px;
 }
 .item img {
-  width: 100%;
+  width: 300px;
   height: 300px;
   border-radius: 4px;
 }
@@ -97,8 +94,6 @@ form ion-icon {
   color: white;
   font-size: 1.4rem;
   margin-top: 20px;
-  display: flex;
-  align-self: flex-start;
 }
 .item-data {
   color: whitesmoke;

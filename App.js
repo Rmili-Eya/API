@@ -9,28 +9,40 @@ searchForm.addEventListener('submit',(e)=>{
     searchQuery = e.target.querySelector('input').value;
 fetchApi();
 });
-async function fetchApi(){
+function fetchApi(){
     const url=`https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_Id}&app_key=${APP_KEY}`;
-const response = await fetch(url);
-const data=await response.json();
-generateHTML(data.hits);//function on va lui passer des données (c'est pa tous les données mais just les données  du hits Array)
-console.log(data);
+fetch(url).then((response) =>
+response.json().then((data)=>{
+    console.log(data);
+    generateHTML(data.hits);
+
+}))
 }
 function generateHTML(results){
 let generatedHTML='';
     results.map(result =>{//on va mapper (loop)le resultat et pour chaque resultat on va créer html item 
    generatedHTML +=
    `
+   <div class="item">
+                     <img src="${result.recipe.image}" alt="">
+                     <div class="flex-container">
+                         <h1 class="title">${result.recipe.label}</h1>
+                         <a class="view-button" href="${result.recipe.url}">View Recipe</a>
+                     </div>
+                     <p class="item-data">calories:${result.recipe.calories.toFixed(2)}</p>
+                 </div>
 
-  <div class="card" style="width: 18rem;">
+
+  
+   `
+    })
+    SearchResultDiv.innerHTML = generatedHTML;
+}
+/*<div class="card" style="width: 18rem;">
   <img src="${result.recipe.image}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${result.recipe.label}</h5>
     <p class="card-text">calories:${result.recipe.calories.toFixed(2)}</p>
     <a href="#" class="btn btn-primary">${result.recipe.url}</a>
   </div>
-</div>
-   `
-    })
-    SearchResultDiv.innerHTML = generatedHTML;
-}
+</div>*/
